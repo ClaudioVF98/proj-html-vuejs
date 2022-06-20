@@ -1,5 +1,7 @@
 <template>
-    <div class="container">
+    <div class="container-main-top">
+
+        <!-- Header con Menu Nav -->
         <div class="header">
             <div class="left-header">
                 <img src="./images/avada-bakery-logo-retina-200x97.png" alt="">
@@ -15,6 +17,7 @@
             </div>
         </div>
 
+        <!-- Div centrale con Bottone -->
         <div class="mid-div-container">
             <p class="mini-title">FRESH & TASTY BAKERY EVERY DAY</p>
             <h1>The Perfect Fresh Bread</h1>
@@ -42,11 +45,14 @@ export default {
 
 
 
-<style lang="scss">
-.container {
+<style scoped lang="scss">
+
+// Background e altezza
+.container-main-top {
     height: 1200px;
     background-image: url("images/hero-header-bakery.jpg");
     background-size: cover;
+    margin-bottom: 100px;
 
     .header {
         align-items: center;
@@ -54,6 +60,7 @@ export default {
         flex-direction: row;
         height: 120px;
 
+        // Logo
         .left-header {
             width: 50%;
 
@@ -62,6 +69,7 @@ export default {
             }
         }
 
+        // Nav Menu
         .right-header {
             width: 50%;
             display: flex;
@@ -71,12 +79,15 @@ export default {
                 text-decoration: none;
                 color: #55328b;
                 margin: 0 10px;
+                cursor: pointer;
 
             }
         }
 
     }
 
+
+    // Div Centrale con info sul prodotto
     .mid-div-container * {
         margin: 10px 0;
     }
@@ -87,10 +98,10 @@ export default {
         flex-direction: column;
         height: calc(100% - 120px);
         justify-content: center;
-        margin: 0 50px;
+        margin: 0 100px;
 
         .mini-title {
-            font-size: 10px;
+            font-size: 12px;
             color: #b1a9b5;
         }
 
@@ -103,13 +114,15 @@ export default {
             color: #888390;
             font-size: 20px;
         }
-
+        
         button {
             width: 30%;
             padding: 8px;
             border: 0;
             background-color: white;
             color: #55328b;
+            cursor: pointer;
+            border-radius: 7px;
         }
     }
 }

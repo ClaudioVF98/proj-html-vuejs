@@ -4,7 +4,9 @@ import App from './App.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-library.add(faCartShopping)
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+library.add(faCartShopping, faAngleLeft, faAngleRight)
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

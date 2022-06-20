@@ -1,17 +1,29 @@
 <template>
   <div id="app">
     <MainTop/>
+    <MainBot/>
+    <BakingOne/>
+    <BakingTwo/>
+    <BakingThree/>
   </div>
 </template>
 
 <script>
 import MainTop from './components/MainTop.vue'
+import MainBot from './components/MainBot.vue'
+import BakingOne from './components/BakingOne.vue'
+import BakingTwo from './components/BakingTwo.vue'
+import BakingThree from './components/BakingThree.vue'
 
 export default {
   name: 'App',
   components: {
-    MainTop
-  }
+    MainTop,
+    MainBot,
+    BakingOne,
+    BakingTwo,
+    BakingThree
+}
 }
 </script>
 
