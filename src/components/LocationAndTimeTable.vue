@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="locations">
 
         <!-- Titoli -->
         <p>Loactions</p>

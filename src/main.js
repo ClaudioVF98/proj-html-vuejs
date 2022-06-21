@@ -11,9 +11,10 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faPinterestP } from '@fortawesome/free-brands-svg-icons'
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
+import { faFile } from '@fortawesome/free-regular-svg-icons'
 
 
-library.add(faCartShopping, faAngleLeft, faAngleRight, faInstagram, faFacebookF, faTwitter, faPinterestP, faAngleUp)
+library.add(faCartShopping, faAngleLeft, faAngleRight, faInstagram, faFacebookF, faTwitter, faPinterestP, faAngleUp, faFile)
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

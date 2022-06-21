@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <FixedComponent/>
     <MainTop/>
     <MainBot/>
     <BakingOne/>
@@ -22,6 +23,7 @@ import LocationAndTimeTable from './components/LocationAndTimeTable.vue'
 import ShopContacts from './components/ShopContacts.vue'
 import ShopNow from './components/ShopNow.vue'
 import MyFooter from './components/MyFooter.vue'
+import FixedComponent from './components/FixedComponent.vue'
 
 
 
@@ -36,7 +38,8 @@ export default {
     LocationAndTimeTable,
     ShopContacts,
     ShopNow,
-    MyFooter
+    MyFooter,
+    FixedComponent
 }
 }
 </script>
@@ -46,6 +49,7 @@ export default {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 #app {

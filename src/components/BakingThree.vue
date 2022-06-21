@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="journal">
         <!-- Primo Contenitore -->
         <div class="firstContainer">
             <div class="topDiv">
@@ -152,7 +152,7 @@ export default {
             position: absolute;
             background-color: #000;
             opacity: 0.5;
-            width: calc(50% - 140px);
+            width: calc(50% - 135px);
             height: 700px;
             z-index: 1;
         }

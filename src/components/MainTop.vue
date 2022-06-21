@@ -1,5 +1,5 @@
 <template>
-    <div class="container-main-top">
+    <div class="container-main-top" id="topPage">
 
         <!-- Header con Menu Nav -->
         <div class="header">
@@ -8,9 +8,9 @@
             </div>
 
             <div class="right-header">
-                <p href="" v-for="(item, i) in menu" :key="i">
-                    {{ item }}
-                </p>
+                <a :href="item.href" v-for="(item, i) in menu" :key="i">
+                    {{ item.name }}
+                </a>
                 <p href="">
                     <font-awesome-icon icon="fa-solid fa-cart-shopping" />
                 </p>
@@ -37,7 +37,41 @@ export default {
     },
     data() {
         return {
-            menu: ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT']
+            menu: [
+                {
+                    name: 'HOME',
+                    href: '#topPage'
+                },
+                {
+                    name: 'SHOP',
+                    href: '#shop'
+                },
+                {
+                    name: 'ABOUT',
+                    href: '#about'
+                },
+                {
+                    name: 'GALLERY',
+                    href: '#gallery'
+                },
+                {
+                    name: 'LOCATIONS',
+                    href: '#locations'
+                },
+                {
+                    name: 'JOURNAL',
+                    href: '#journal'
+                },
+                {
+                    name: 'CONTACT',
+                    href: '#contact'
+                },
+                {
+                    name: 'MY ACCOUNT',
+                    href: '#'
+                }
+            ]
+            // ['HOME', 'SHOP', 'ABOUT', 'GALLERY', 'LOCATIONS', 'JOURNAL', 'CONTACT', 'MY ACCOUNT']
         }
     }
 }
@@ -76,12 +110,16 @@ export default {
             display: flex;
             justify-content: space-evenly;
 
-            p {
+            a {
                 text-decoration: none;
                 color: #55328b;
                 margin: 0 10px;
                 cursor: pointer;
 
+            }
+
+            p:first-of-type {
+                border-bottom: 2px #55328b solid;
             }
         }
 

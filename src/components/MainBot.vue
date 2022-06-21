@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container" id="shop">
         <!-- Contenitore a sinistra con Pulsante Shopping -->
         <div class="left-div">
             <p class="mini-title">OUR PRODUCTS</p>
@@ -11,25 +11,28 @@
         <!-- Contenitore a destra con Arrow di scorrimento -->
         <div class="right-div">
             <div class="image-div">
-                <img src="./images/choco-chip-cookies-400x510.jpg" alt="">
+                <img :src='items[activeSlide].photo' alt="">
                 <div>
-                    <font-awesome-icon icon="fa-solid fa-angle-left" class="left arrow" />
+                    <font-awesome-icon icon="fa-solid fa-angle-left" class="left arrow" @click="prevSlide()" />
                 </div>
                 <div class="centered-info">
-                    <h2>Choco Chip Cookies</h2>
-                    <p>Cookies, Pastries</p>
-                    <h3>$19.00 - $39.00</h3>
+                    <h2>{{ items[activeSlide].name }}</h2>
+                    <p>{{ items[activeSlide].genre }}</p>
+                    <h3>{{ items[activeSlide].price }}</h3>
                 </div>
             </div>
+
+
+
             <div class="image-div">
-                <img src="./images/strawberry-jam-cookies-400x510.jpg" alt="">
+                <img :src="items[secondActiveSlide].photo" alt="">
                 <div>
-                    <font-awesome-icon icon="fa-solid fa-angle-right" class="right arrow" />
+                    <font-awesome-icon icon="fa-solid fa-angle-right" class="right arrow" @click="nextSlide()" />
                 </div>
                 <div class="centered-info">
-                    <h2>Strawberry Jam Cookies</h2>
-                    <p>Cookies, Pastries</p>
-                    <h3>$24.00 - $62.00</h3>
+                    <h2>{{ items[secondActiveSlide].name }}</h2>
+                    <p>{{ items[secondActiveSlide].genre }}</p>
+                    <h3>{{ items[secondActiveSlide].price }}</h3>
                 </div>
             </div>
         </div>
@@ -41,6 +44,104 @@
 export default {
     name: 'MainBot',
     components: {
+    },
+    data() {
+        return {
+            activeSlide: 0,
+            secondActiveSlide: 1,
+            items: [
+                {
+                    name: 'Choco Chip Cookies',
+                    genre: 'Cookies, Pastries',
+                    price: '$19.00 - $39.00',
+                    photo: require('./images/choco-chip-cookies-400x510.jpg')
+                },
+                {
+                    name: 'Strawberry Jam Cookies',
+                    genre: 'Cookies, Pastries',
+                    price: '$24.00 - $62.00',
+                    photo: require('./images/strawberry-jam-cookies-400x510.jpg')
+                },
+                {
+                    name: 'Strawberry Donut',
+                    genre: 'Cookies, Pastries',
+                    price: '$24.00 - $42.00',
+                    photo: require('./images/strawberry-donut-400x510.jpg')
+                },
+                {
+                    name: 'Perfect Macarons',
+                    genre: 'Cookies, Pastries',
+                    price: '$18.00 - 52.00',
+                    photo: require('./images/perfect-macarons-400x510.jpg')
+                },
+                {
+                    name: 'Blackberry Stuffed Bread',
+                    genre: 'Cookies, Pastries',
+                    price: '$25.00 - $63.00',
+                    photo: require('./images/blackberry-stuffed-bread-400x510.jpg')
+                },
+                {
+                    name: 'Cherry Cake',
+                    genre: 'Cookies, Pastries',
+                    price: '$30.00 - $91.00',
+                    photo: require('./images/cherry-cake-400x510.jpg')
+                },
+                {
+                    name: 'Cookies with Ice Cream',
+                    genre: 'Cookies, Pastries',
+                    price: '$23.00 - $37.00',
+                    photo: require('./images/cookies-with-ice-cream-400x510.jpg')
+                },
+                {
+                    name: 'Glazed Pancake with Lemon',
+                    genre: 'Cookies, Pastries',
+                    price: '$31.00 - $52.00',
+                    photo: require('./images/glazed-pancake-with-lemon-400x510.jpg')
+                },
+                {
+                    name: 'Home Bread',
+                    genre: 'Cookies, Pastries',
+                    price: '$11.00 - $27.00',
+                    photo: require('./images/home-bread-400x510.jpg')
+                },
+                {
+                    name: 'Premium Bread',
+                    genre: 'Cookies, Pastries',
+                    price: '$12.00 - $29.00',
+                    photo: require('./images/premium-bread-400x510.jpg')
+                },
+                {
+                    name: 'Small Cupcake',
+                    genre: 'Cookies, Pastries',
+                    price: '$17.00 - $28.00',
+                    photo: require('./images/small-cupcake-400x510.jpg')
+                }
+
+            ]
+        }
+    },
+    methods: {
+        nextSlide() {
+            this.activeSlide++;
+            this.secondActiveSlide++;
+            if (this.activeSlide + 1 > this.items.length - 1) {
+                this.activeSlide = 0;
+            }
+            if (this.secondActiveSlide + 1 > this.items.length - 1) {
+                this.secondActiveSlide = 0;
+            }
+
+        },
+        prevSlide() {
+            this.activeSlide--;
+            this.secondActiveSlide--;
+            if (this.activeSlide < 0) {
+                this.activeSlide = this.items.length - 1;
+            }
+            if (this.secondActiveSlide < 0) {
+                this.secondActiveSlide = this.items.length - 1;
+            }
+        }
     }
 }
 
@@ -125,6 +226,7 @@ export default {
         .centered-info * {
             margin-bottom: 15px;
         }
+
         .centered-info {
             content: '';
             background-color: #000;

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container">
+        <div class="container" id="about">
             <div class="titles">
 
                 <!-- Titoli -->
@@ -75,12 +75,13 @@ export default {
 
         .plans:hover {
             background-image: url("images/corporate-hover-bg.jpg");
-            background-size: cover;
+            background-size: cover;          
         }
 
         .plans {
             background-image: url("images/corporate-bg.jpg");
             background-size: cover;
+
 
             .centered-info * {
                 margin-bottom: 10px;

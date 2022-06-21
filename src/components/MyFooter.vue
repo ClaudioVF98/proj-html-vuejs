@@ -39,12 +39,14 @@
 
             <!-- Brands -->
             <div class="third-right-div d-flex">
-                <font-awesome-icon v-for="(brands, i) in footerMenuBrands" :icon="brands" :key="i" class="brands"/>
+                <font-awesome-icon v-for="(brands, i) in footerMenuBrands" :icon="brands" :key="i" class="brands" />
             </div>
 
             <!-- Torna su -->
             <div class="fourth-right-div">
-                <font-awesome-icon icon="fas fa-angle-up" class="iconUp"/>
+                <a href="#topPage">
+                    <font-awesome-icon icon="fas fa-angle-up" class="iconUp" />
+                </a>
             </div>
         </div>
     </div>
@@ -92,7 +94,7 @@ export default {
             color: #55328b;
             margin-bottom: 100px;
 
-            p{
+            p {
                 cursor: pointer;
             }
 
@@ -125,6 +127,7 @@ export default {
 
         .first-right-div {
             margin: 50px 0;
+
             h1 {
                 color: #55328b;
             }
@@ -132,6 +135,7 @@ export default {
 
         .second-right-div {
             margin-bottom: 80px;
+
             input {
                 width: 35%;
                 padding: 5px;
@@ -154,7 +158,7 @@ export default {
                 background-color: #f0edf5;
             }
         }
-        
+
         .third-right-div {
             color: #55328b;
             display: flex;
@@ -173,11 +177,13 @@ export default {
             display: flex;
             justify-content: end;
 
-            .iconUp {
+            a {
+                text-decoration: none;
                 background-color: #474747;
                 padding: 10px;
                 border-radius: 7px;
                 cursor: pointer;
+                color: white;
             }
         }
     }
