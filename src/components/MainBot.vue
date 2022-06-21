@@ -119,6 +119,7 @@ export default {
             padding: 10px 5px;
             cursor: pointer;
             margin: 0;
+            z-index: 4;
         }
 
         .centered-info * {

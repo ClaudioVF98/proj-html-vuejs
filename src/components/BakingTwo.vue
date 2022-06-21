@@ -162,7 +162,7 @@ export default {
                     background-color: #000;
                     opacity: 0.5;
                     width: 100%;
-                    height: calc(100% - 87px);
+                    height: calc(100% - 60px);
                     position: absolute;
                     top: 0%;
                     left: 50%;
@@ -201,6 +201,7 @@ export default {
             padding: 10px 5px;
             cursor: pointer;
             margin: 0;
+            z-index: 4;
         }
 
         .left {

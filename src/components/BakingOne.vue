@@ -67,7 +67,7 @@ export default {
     .moments {
         display: flex;
         justify-content: space-evenly;
-        height: 700px;
+        height: 1000px;
 
         .plans:hover .centered-info {
             display: flex;
