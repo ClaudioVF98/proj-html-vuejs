@@ -62,6 +62,11 @@ export default {
             border-radius: 7px;
             cursor: pointer;
         }
+
+        button:hover {
+            color: white;
+            background-color: #55328b;
+        }
     }
 }
 </style>

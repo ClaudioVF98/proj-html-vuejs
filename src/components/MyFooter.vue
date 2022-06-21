@@ -1,30 +1,48 @@
 <template>
     <div class="container">
+
+        <!-- Colonna di Sinistra -->
         <div class="left-div">
+
+            <!-- Logo -->
             <div class="first-left-div">
                 <img src="./images/avada-bakery-logo-retina-200x97.png" alt="">
             </div>
+
+            <!-- Nav -->
             <div class="second-left-div">
                 <p v-for="(item, i) in footerMenu" :key="i">{{ item }}</p>
                 <p>
                     <font-awesome-icon icon="fa-solid fa-cart-shopping" /> <span>0</span>
                 </p>
             </div>
+
+            <!-- Copyright -->
             <div class="third-left-div">
                 <p>© Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress</p>
             </div>
         </div>
+
+        <!-- Colonna di Destra -->
         <div class="right-div">
+
+            <!-- Subscribe -->
             <div class="first-right-div d-flex">
                 <h1>Subscribe to Our Newsletter</h1>
             </div>
+
+            <!-- Email e Subscribe Button -->
             <div class="second-right-div d-flex">
                 <input type="text" placeholder="Enter Email Adress*">
                 <button>Subscribe</button>
             </div>
+
+            <!-- Brands -->
             <div class="third-right-div d-flex">
                 <font-awesome-icon v-for="(brands, i) in footerMenuBrands" :icon="brands" :key="i" class="brands"/>
             </div>
+
+            <!-- Torna su -->
             <div class="fourth-right-div">
                 <font-awesome-icon icon="fas fa-angle-up" class="iconUp"/>
             </div>
@@ -53,6 +71,7 @@ export default {
 .container {
     margin: 0 100px;
     display: flex;
+    padding-bottom: 5px;
 
     .left-div {
         display: flex;
@@ -61,6 +80,10 @@ export default {
 
         .first-left-div {
             margin-bottom: 50px;
+
+            img {
+                cursor: pointer;
+            }
         }
 
         .second-left-div {
@@ -124,6 +147,11 @@ export default {
                 border: 0;
                 border-radius: 5px;
                 cursor: pointer;
+            }
+
+            button:hover {
+                color: #55328b;
+                background-color: #f0edf5;
             }
         }
         

@@ -12,30 +12,70 @@
         <!-- Prodotti con prezzi -->
         <div class="right-div">
             <div class="img-div pos-relative">
-                <img src="./images/choco-chip-cookies-400x510.jpg" alt="">
-                <div>
-                    <font-awesome-icon icon="fa-solid fa-angle-left" class="left arrow" />
+                <div class="image">
+                    <img src="./images/choco-chip-cookies-400x510.jpg" alt="">
+                    <div>
+                        <font-awesome-icon icon="fa-solid fa-angle-left" class="left arrow" />
+                    </div>
+                    <div class="centered-info">
+                        <p>SELECT OPTION / QUICK VIEW</p>
+                    </div>
                 </div>
-                <h2>Choco Chip Cookies</h2>
-                <p>$19.00 - $39.00</p>
+
+                <div class="info">
+                    <h2>Choco Chip Cookies</h2>
+                    <p>$19.00 - $39.00</p>
+                </div>
             </div>
-            <div class="img-div">
-                <img src="./images/strawberry-jam-cookies-400x510.jpg" alt="">
-                <h2>Strawberry Jam Cookies</h2>
-                <p>$24.00 - $62.00</p>
-            </div>
-            <div class="img-div">
-                <img src="./images/strawberry-donut-400x510.jpg" alt="">
-                <h2>Strawberry Donut</h2>
-                <p>$24.00 - $42.00</p>
-            </div>
+
+
             <div class="img-div pos-relative">
-                <img src="./images/perfect-macarons-400x510.jpg" alt="">
-                <div>
-                    <font-awesome-icon icon="fa-solid fa-angle-right" class="right arrow" />
+                <div class="image">
+                    <img src="./images/strawberry-jam-cookies-400x510.jpg" alt="">
+                    <div class="centered-info">
+                        <p>SELECT OPTION / QUICK VIEW</p>
+                    </div>
                 </div>
-                <h2>Perfect Macarons</h2>
-                <p>$18.00 - $52.00</p>
+
+
+                <div class="info">
+                    <h2>Strawberry Jam Cookies</h2>
+                    <p>$24.00 - $62.00</p>
+                </div>
+            </div>
+
+
+
+            <div class="img-div pos-relative">
+                <div class="image">
+                    <img src="./images/strawberry-donut-400x510.jpg" alt="">
+                    <div class="centered-info">
+                        <p>SELECT OPTION / QUICK VIEW</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <h2>Strawberry Donut</h2>
+                    <p>$24.00 - $42.00</p>
+                </div>
+            </div>
+
+
+
+            <div class="img-div pos-relative">
+                <div class="image">
+                    <img src="./images/perfect-macarons-400x510.jpg" alt="">
+                    <div>
+                        <font-awesome-icon icon="fa-solid fa-angle-right" class="right arrow" />
+                    </div>
+                    <div class="centered-info">
+                        <p>SELECT OPTION / QUICK VIEW</p>
+                    </div>
+                </div>
+
+                <div class="info">
+                    <h2>Perfect Macarons</h2>
+                    <p>$18.00 - $52.00</p>
+                </div>
             </div>
         </div>
     </div>
@@ -88,16 +128,51 @@ export default {
             padding: 8px;
             cursor: pointer;
         }
+
+        button:hover {
+            background-color: #f0edf5;
+            color: #55328b;
+        }
     }
 
     // Prodotti e prezzi
+
     .right-div {
         display: flex;
         width: 60%;
 
+
         .img-div {
             width: calc(100% / 4);
             margin-right: 10px;
+            display: flex;
+            flex-direction: column;
+
+            .image:hover .centered-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            // position: relative;
+            .image {
+
+                .centered-info {
+                    content: '';
+                    background-color: #000;
+                    opacity: 0.5;
+                    width: 100%;
+                    height: calc(100% - 87px);
+                    position: absolute;
+                    top: 0%;
+                    left: 50%;
+                    transform: translate(-50%, -0%);
+                    display: none;
+                    text-align: center;
+                    z-index: 3;
+                    color: white;
+                }
+            }
         }
 
         img {

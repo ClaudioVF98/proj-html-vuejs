@@ -66,6 +66,7 @@ export default {
 
             img {
                 padding: 5px;
+                cursor: pointer;
             }
         }
 
@@ -123,6 +124,11 @@ export default {
             color: #55328b;
             cursor: pointer;
             border-radius: 7px;
+        }
+
+        button:hover {
+            background-color: #55328b;
+            color: white;
         }
     }
 }

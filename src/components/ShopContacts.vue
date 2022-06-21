@@ -105,6 +105,11 @@ export default {
                 padding: 8px;
                 cursor: pointer;
             }
+
+            button:hover {
+                background-color: #f0edf5;
+                color: #55328b;
+            }
         }
     }
 
