@@ -11,7 +11,10 @@
         <!-- Contenitore a destra con Arrow di scorrimento -->
         <div class="right-div">
             <div class="image-div">
-                <img :src='items[activeSlide].photo' alt="">
+                <div class="container-img">
+                    <img :src='items[activeSlide].photo' alt="">
+                    <div class="overlay"></div>
+                </div>
                 <div>
                     <font-awesome-icon icon="fa-solid fa-angle-left" class="left arrow" @click="prevSlide()" />
                 </div>
@@ -221,7 +224,22 @@ export default {
             cursor: pointer;
             margin: 0;
             z-index: 4;
+
+            .container-img {
+                position: relative;
+                .overlay {
+                    content: '';
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0%;
+                    left: 0;
+                }
+            }
         }
+
+
 
         .centered-info * {
             margin-bottom: 15px;
@@ -229,17 +247,15 @@ export default {
 
         .centered-info {
             content: '';
-            background-color: #000;
-            opacity: 0.5;
+            background-color: rgba($color: #000000, $alpha: 0.5);
             width: 100%;
-            height: calc(100%);
+            height: 100%;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             display: none;
             text-align: center;
-            z-index: 3;
             color: white;
         }
 
