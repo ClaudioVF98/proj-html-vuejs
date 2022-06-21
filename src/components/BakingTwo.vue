@@ -1,5 +1,7 @@
 <template>
     <div class="container">
+
+        <!-- Info Prodotto + Shop Button -->
         <div class="left-div">
             <h1>Find a freshly baked product perfect for you</h1>
             <p class="mini-title">Integer a nibh ex porttitor retrum et ut velit. Etiam ac felis at leo feugiat
@@ -7,6 +9,7 @@
             <button>Shop All Products</button>
         </div>
 
+        <!-- Prodotti con prezzi -->
         <div class="right-div">
             <div class="img-div pos-relative">
                 <img src="./images/choco-chip-cookies-400x510.jpg" alt="">
@@ -54,6 +57,7 @@ export default {
     width: 100%;
     margin-bottom: 100px;
 
+    // Shop + Info e bottone
     .left-div {
         text-align: center;
         width: 25%;
@@ -86,6 +90,7 @@ export default {
         }
     }
 
+    // Prodotti e prezzi
     .right-div {
         display: flex;
         width: 60%;

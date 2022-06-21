@@ -6,7 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
-library.add(faCartShopping, faAngleLeft, faAngleRight)
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faPinterestP } from '@fortawesome/free-brands-svg-icons'
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
+
+
+library.add(faCartShopping, faAngleLeft, faAngleRight, faInstagram, faFacebookF, faTwitter, faPinterestP, faAngleUp)
 
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)

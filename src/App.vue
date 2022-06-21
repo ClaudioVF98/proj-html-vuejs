@@ -5,6 +5,10 @@
     <BakingOne/>
     <BakingTwo/>
     <BakingThree/>
+    <LocationAndTimeTable/>
+    <ShopContacts/>
+    <ShopNow/>
+    <MyFooter/>
   </div>
 </template>
 
@@ -14,6 +18,12 @@ import MainBot from './components/MainBot.vue'
 import BakingOne from './components/BakingOne.vue'
 import BakingTwo from './components/BakingTwo.vue'
 import BakingThree from './components/BakingThree.vue'
+import LocationAndTimeTable from './components/LocationAndTimeTable.vue'
+import ShopContacts from './components/ShopContacts.vue'
+import ShopNow from './components/ShopNow.vue'
+import MyFooter from './components/MyFooter.vue'
+
+
 
 export default {
   name: 'App',
@@ -22,7 +32,11 @@ export default {
     MainBot,
     BakingOne,
     BakingTwo,
-    BakingThree
+    BakingThree,
+    LocationAndTimeTable,
+    ShopContacts,
+    ShopNow,
+    MyFooter
 }
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <!-- Primo Contenitore -->
         <div class="firstContainer">
             <div class="topDiv">
                 <div class="top-left-div">
@@ -18,6 +19,7 @@
             </div>
         </div>
 
+        <!-- Secondo Contenitore -->
         <div class="secondContainer">
             <div class="mid-left-div">
                 <div class="top-mid-left-div">
@@ -44,6 +46,7 @@
             </div>
         </div>
 
+        <!-- Terzo Contenitore -->
         <div class="thirdContainer">
             <div class="top-div">
                 <h1>Delivered to your home</h1>
@@ -76,6 +79,8 @@ export default {
 <style scoped lang="scss">
 .container {
 
+
+    // Primo Contenitore
     .firstContainer::before {
         content: '';
         display: block;
@@ -134,6 +139,8 @@ export default {
         }
     }
 
+
+    // Secondo Contenitore
     .secondContainer {
         width: 100%;
         display: flex;
@@ -218,6 +225,8 @@ export default {
         }
     }
 
+
+    // Terzo Contenitore
     .thirdContainer::before {
         content: "";
         display: block;
